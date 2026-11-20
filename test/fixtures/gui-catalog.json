@@ -1,0 +1,148 @@
+{
+  "format_version": "gmic_json_1.0",
+  "gmic_version": "4.0.7",
+  "categories": [
+    {
+      "name": "Artistic",
+      "filters": [
+        {
+          "name": "Dream Smoothing",
+          "lang": "en",
+          "command": "fx_dreamsmooth",
+          "command_preview": "fx_dreamsmooth_preview",
+          "parameters": [
+            {
+              "type": "note",
+              "text": "An anisotropic smoothing filter that creates a soft, dream-like image."
+            },
+            {
+              "type": "int",
+              "name": "Iterations",
+              "default": "3",
+              "min": "1",
+              "max": "10",
+              "pos": "1"
+            },
+            { "type": "bool", "name": "Equalize at Each Step", "default": "1", "pos": "2" },
+            {
+              "type": "choice",
+              "name": "Merging Option",
+              "default": "1",
+              "pos": "3",
+              "choices": { "0": "add", "1": "alpha", "2": "average" }
+            },
+            {
+              "type": "float",
+              "name": "Opacity",
+              "default": "0.8",
+              "min": "0",
+              "max": "1",
+              "pos": "4"
+            },
+            { "type": "bool", "name": "Reverse Order", "default": "0", "pos": "5" },
+            {
+              "type": "float",
+              "name": "Smoothness",
+              "default": "0.8",
+              "min": "0",
+              "max": "5",
+              "pos": "6"
+            },
+            {
+              "type": "choice",
+              "name": "Parallel Processing",
+              "default": "1",
+              "pos": "7",
+              "choices": { "0": "Auto", "1": "One thread", "2": "Two threads" }
+            },
+            {
+              "type": "int",
+              "name": "Spatial Overlap",
+              "default": "24",
+              "min": "0",
+              "max": "256",
+              "pos": "8"
+            },
+            {
+              "type": "choice",
+              "name": "Preview Type",
+              "default": "0",
+              "pos": "9",
+              "choices": { "0": "Full", "1": "Forward horizontal" }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Colors",
+      "filters": [
+        {
+          "name": "Colorize [Interactive]",
+          "lang": "en",
+          "command": "fx_colorize_interactive",
+          "command_preview": "fx_colorize_interactive_preview",
+          "parameters": [
+            { "type": "note", "text": "Adds color using an interactive window." },
+            {
+              "type": "choice",
+              "name": "Input Type",
+              "default": "0",
+              "pos": "1",
+              "choices": { "0": "B&W Photograph", "1": "Lineart" }
+            }
+          ]
+        },
+        {
+          "name": "Colorize [Photographs]",
+          "lang": "en",
+          "command": "fx_recolorize",
+          "command_preview": "fx_recolorize_preview",
+          "parameters": [
+            { "type": "note", "text": "Colorizes black and white photographs from color patches." },
+            {
+              "type": "int",
+              "name": "Smoothness",
+              "default": "2",
+              "min": "0",
+              "max": "6",
+              "pos": "1"
+            },
+            {
+              "type": "float",
+              "name": "Anisotropy",
+              "default": "0.2",
+              "min": "0",
+              "max": "1",
+              "pos": "2"
+            },
+            {
+              "type": "choice",
+              "name": "Output Mode",
+              "default": "0",
+              "pos": "3",
+              "choices": { "0": "Merge Brightness / Colors", "1": "Split Brightness / Colors" }
+            }
+          ]
+        },
+        {
+          "name": "Colorize [with Colormap]",
+          "lang": "en",
+          "command": "fx_bwrecolorize",
+          "command_preview": "fx_bwrecolorize",
+          "parameters": [
+            { "type": "note", "text": "Maps grayscale values to a color map." },
+            {
+              "type": "float",
+              "name": "Brightness",
+              "default": "0",
+              "min": "-100",
+              "max": "100",
+              "pos": "1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
